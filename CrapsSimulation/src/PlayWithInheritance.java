@@ -6,7 +6,7 @@
 
 public class PlayWithInheritance
 {
-	public static int RUN_EXAMPLE = 1; // change this to try different behaviors
+	public static int RUN_EXAMPLE = 7; // change this to try different behaviors
 										// below
 
 	public static void main(String[] args)
@@ -89,6 +89,13 @@ public class PlayWithInheritance
 			int result = dice.getLastRoll();
 
 			StdOut.printf("Roll of '%s' and '%s' is: %d.\n", aSingleDie, crooked1, result);
+		}
+		else if(RUN_EXAMPLE == 7)
+		{
+			Die die = new CrookedDie1();
+			CrookedDie1 crookedDie = new CrookedDie1();
+			StdOut.println(die.testStatic());
+			StdOut.println(crookedDie.testStatic());
 		}
 
 		StdOut.println();
